@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iUe-P0-fAL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="Notecards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's study some AWS Notecards!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4d-Pi-yrl">
+                                <rect key="frame" x="77" y="143" width="260" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select an area you would like to focus on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcR-Ia-DiG">
+                                <rect key="frame" x="25" y="202" width="364" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SID-SZ-pk4">
+                                <rect key="frame" x="47.5" y="258" width="319" height="66"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="319" id="Afu-6V-nNB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="DoR-EF-DgS"/>
+                                    <constraint firstAttribute="height" constant="66" id="TV2-6g-jeF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Certified Solutions Architect Associate">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saaBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIS-h4-K2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJk-u0-FE7">
+                                <rect key="frame" x="48" y="358" width="319" height="66"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="PMP-K1-N4u"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="319" id="U3w-cA-elQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Certified Developer Associate">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cdaBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7w0-2g-Ct1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acF-sH-zYp">
+                                <rect key="frame" x="47.5" y="459" width="319" height="66"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Tyy-3S-UQZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="319" id="xcE-hy-5Uh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Select an AWS Service">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectServiceBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4qp-cf-vy7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp3-hF-rG5">
+                                <rect key="frame" x="47.5" y="568" width="319" height="66"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="bvJ-5F-I45"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="319" id="yhR-Qs-EzK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="APIs">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="apisBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1vr-vc-OxV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kcR-Ia-DiG" secondAttribute="trailing" constant="25" id="3Oz-ww-rno"/>
+                            <constraint firstItem="acF-sH-zYp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HwB-zO-sSC"/>
+                            <constraint firstItem="Wp3-hF-rG5" firstAttribute="top" secondItem="acF-sH-zYp" secondAttribute="bottom" constant="43" id="IyH-L1-aoX"/>
+                            <constraint firstItem="kcR-Ia-DiG" firstAttribute="top" secondItem="r4d-Pi-yrl" secondAttribute="bottom" constant="38" id="Mfc-fa-DD3"/>
+                            <constraint firstItem="SID-SZ-pk4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QwL-m2-O9B"/>
+                            <constraint firstItem="lJk-u0-FE7" firstAttribute="top" secondItem="SID-SZ-pk4" secondAttribute="bottom" constant="34" id="RxW-Ue-NCB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lJk-u0-FE7" secondAttribute="trailing" constant="47" id="XTG-nk-6Kn"/>
+                            <constraint firstItem="acF-sH-zYp" firstAttribute="top" secondItem="lJk-u0-FE7" secondAttribute="bottom" constant="35" id="aIF-Rb-28s"/>
+                            <constraint firstItem="kcR-Ia-DiG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="azT-TG-qtM"/>
+                            <constraint firstItem="SID-SZ-pk4" firstAttribute="top" secondItem="kcR-Ia-DiG" secondAttribute="bottom" constant="35" id="bKX-tM-jEG"/>
+                            <constraint firstItem="lJk-u0-FE7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mOz-Ri-dcC"/>
+                            <constraint firstItem="Wp3-hF-rG5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rJF-Rv-5oU"/>
+                            <constraint firstItem="r4d-Pi-yrl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="szZ-d9-5Wb"/>
+                            <constraint firstItem="r4d-Pi-yrl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="t8o-tx-Fok"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="syp-ym-V6q"/>
+                    <connections>
+                        <segue destination="deC-BM-rD1" kind="show" identifier="SAASegue" id="FG8-Xo-FOR"/>
+                        <segue destination="deC-BM-rD1" kind="show" identifier="CDASegue" id="hxB-xR-ldh"/>
+                        <segue destination="deC-BM-rD1" kind="show" id="r97-Bc-12k"/>
+                        <segue destination="6Sz-aE-3GD" kind="show" identifier="ServiceListSegue" id="Sta-Fd-KRB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Card View Controller-->
+        <scene sceneID="pNn-NV-BYU">
+            <objects>
+                <viewController id="deC-BM-rD1" customClass="CardViewController" customModule="Notecards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kKc-9j-Asv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0H-6s-aon">
+                                <rect key="frame" x="186" y="296" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="YfW-JT-vde"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1KP-An-Pae"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLi-hf-Se1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2358" y="-281"/>
+        </scene>
+        <!--Service List View Controller-->
+        <scene sceneID="Ues-6I-mgN">
+            <objects>
+                <viewController id="6Sz-aE-3GD" customClass="ServiceListViewController" customModule="Notecards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bnn-yM-vEM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mpm-eD-DD9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServiceTableViewCell" id="FPs-yo-aEs">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPs-yo-aEs" id="n8J-In-tBC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="YHD-j7-hto"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TBe-Hw-av4"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mpm-eD-DD9" id="gRh-h8-NuO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gm-vX-CqY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2358" y="488"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d2N-Hc-aqr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iUe-P0-fAL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f4a-4S-LLF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZbW-Uq-Ejv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hg2-5S-2kM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="r97-Bc-12k"/>
+    </inferredMetricsTieBreakers>
+</document>
