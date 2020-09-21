@@ -9,7 +9,7 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
-    
+
     // MARK: - Variables
     
     var cardsService: CardsServiceProtocol = CardsService()
@@ -80,21 +80,21 @@ class DashboardViewController: UIViewController {
             let destinationVC = segue.destination as! CardViewController
             
             destinationVC.cards = cardsArray
-            destinationVC.testType = "SAA"
+            destinationVC.testType = "saa"
         }
         
         if segue.identifier == "CDASegue" {
             let destinationVC = segue.destination as! CardViewController
             
             destinationVC.cards = cardsArray
-            destinationVC.testType = "CDA"
+            destinationVC.testType = "cda"
         }
         
         if segue.identifier == "APISegue" {
             let destinationVC = segue.destination as! CardViewController
             
             destinationVC.cards = cardsArray
-            destinationVC.testType = "API"
+            destinationVC.testType = "api"
         }
     }
 }

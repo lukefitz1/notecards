@@ -112,7 +112,7 @@
                     <connections>
                         <segue destination="deC-BM-rD1" kind="show" identifier="SAASegue" id="FG8-Xo-FOR"/>
                         <segue destination="deC-BM-rD1" kind="show" identifier="CDASegue" id="hxB-xR-ldh"/>
-                        <segue destination="deC-BM-rD1" kind="show" id="r97-Bc-12k"/>
+                        <segue destination="deC-BM-rD1" kind="show" identifier="APISegue" id="r97-Bc-12k"/>
                         <segue destination="6Sz-aE-3GD" kind="show" identifier="ServiceListSegue" id="Sta-Fd-KRB"/>
                     </connections>
                 </viewController>
@@ -128,22 +128,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0H-6s-aon">
-                                <rect key="frame" x="186" y="296" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Define the following components of a step function: Tasks, State Machine" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0H-6s-aon">
+                                <rect key="frame" x="20" y="122" width="374" height="381"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="381" id="0hv-qf-h7c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2b-Ln-zK8">
+                                <rect key="frame" x="47.5" y="610" width="319" height="66"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="319" id="0Xf-ve-dcd"/>
+                                    <constraint firstAttribute="height" constant="66" id="1d9-zO-qSU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="CrA-wp-3FT"/>
+                                </constraints>
+                                <state key="normal" title="Flip Card">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCardBtnTapped:" destination="deC-BM-rD1" eventType="touchUpInside" id="Rh8-WC-JRN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card 333 of 333" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzX-SR-s4q">
+                                <rect key="frame" x="109" y="752" width="197" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I2b-Ln-zK8" firstAttribute="centerX" secondItem="YfW-JT-vde" secondAttribute="centerX" id="8b3-tB-0J7"/>
+                            <constraint firstItem="YfW-JT-vde" firstAttribute="bottom" secondItem="pzX-SR-s4q" secondAttribute="bottom" constant="89" id="9aO-mD-Bje"/>
+                            <constraint firstItem="pzX-SR-s4q" firstAttribute="leading" secondItem="I2b-Ln-zK8" secondAttribute="trailing" constant="-257.5" id="AID-cz-tnK"/>
+                            <constraint firstItem="c0H-6s-aon" firstAttribute="top" secondItem="YfW-JT-vde" secondAttribute="top" constant="34" id="MVj-W0-aZ7"/>
+                            <constraint firstItem="YfW-JT-vde" firstAttribute="trailing" secondItem="c0H-6s-aon" secondAttribute="trailing" constant="20" id="YwZ-Qx-XOq"/>
+                            <constraint firstItem="I2b-Ln-zK8" firstAttribute="top" secondItem="c0H-6s-aon" secondAttribute="bottom" constant="107" id="b9m-8a-0tE"/>
+                            <constraint firstItem="c0H-6s-aon" firstAttribute="leading" secondItem="YfW-JT-vde" secondAttribute="leading" constant="20" id="dqZ-mJ-lyY"/>
+                            <constraint firstItem="pzX-SR-s4q" firstAttribute="leading" secondItem="YfW-JT-vde" secondAttribute="leading" constant="109" id="dxh-Oz-lFp"/>
+                            <constraint firstItem="YfW-JT-vde" firstAttribute="trailing" secondItem="pzX-SR-s4q" secondAttribute="trailing" constant="108" id="t30-Gc-pNv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YfW-JT-vde"/>
                     </view>
                     <navigationItem key="navigationItem" id="1KP-An-Pae"/>
+                    <connections>
+                        <outlet property="cardCountLabel" destination="pzX-SR-s4q" id="IOL-08-ks6"/>
+                        <outlet property="cardTextLabel" destination="c0H-6s-aon" id="e4j-w0-AI3"/>
+                        <outlet property="flipCardBtn" destination="I2b-Ln-zK8" id="bZu-ZM-4gv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLi-hf-Se1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2358" y="-281"/>
+            <point key="canvasLocation" x="2357.971014492754" y="-281.25"/>
         </scene>
         <!--Service List View Controller-->
         <scene sceneID="Ues-6I-mgN">
