@@ -17,11 +17,12 @@ class ServiceListViewController: UIViewController, UITableViewDataSource, UITabl
     // MARK: - Variables
     
     var cards: [Card] = []
-    var services: [String] = [] {
+    var services: [[String]] = [[]] {
         didSet {
             tableView.reloadData()
         }
     }
+    var selectedService: String = ""
     
     // MARK: - Lifecycle methods
     
@@ -38,12 +39,13 @@ class ServiceListViewController: UIViewController, UITableViewDataSource, UITabl
     
     func getServices() {
         let servicesName = Services()
-        var serviceSet = Set<String>()
+        var serviceSet = Set<Array<String>>()
         
         cards.forEach { card in
             card.services.forEach { service in
                 let serviceName = servicesName.getName(service: service)
-                serviceSet.insert(serviceName)
+                let serviceArray = [service, serviceName]
+                serviceSet.insert(serviceArray)
             }
         }
         
@@ -59,13 +61,26 @@ class ServiceListViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceTableViewCell", for: indexPath)
         
-        cell.textLabel?.text = services[indexPath.row]
+        cell.textLabel?.text = services[indexPath.row][1]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        selectedService = services[indexPath.row][0]
+        self.performSegue(withIdentifier: "ServiceToCardSegue", sender: self)
     }
     
+    // MARK: - Prepare for Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ServiceToCardSegue" {
+            let destinationVC = segue.destination as! CardViewController
+            
+            destinationVC.cards = cards
+            destinationVC.service = selectedService
+        }
+    }
     
 }

@@ -38,7 +38,7 @@ class CardViewController: UIViewController {
     // MARK: - Class methods
     
     func getServices() {
-        if testType != "api" {
+        if testType != "api" && service.isEmpty {
             cards.forEach { card in
                 if card.tests.contains(testType) {
                     questions.append(card)
@@ -48,6 +48,14 @@ class CardViewController: UIViewController {
             cards.forEach { card in
                 if card.type == "api" || card.type == "question" {
                     questions.append(card)
+                }
+            }
+        } else if testType.isEmpty {
+            if service != "" {
+                cards.forEach { card in
+                    if card.services.contains(service) {
+                        questions.append(card)
+                    }
                 }
             }
         }
@@ -96,7 +104,39 @@ class CardViewController: UIViewController {
                         cardTextLabel.attributedText = attribute
                     }
                 } else {
-                    cardTextLabel.text = questions[questionsIndex].backOfCard
+                    let backOfCard = questions[questionsIndex].backOfCard
+                    let backOfCardArray = backOfCard?.components(separatedBy: "_")
+                    var formattedAnswer = ""
+                    
+                    backOfCardArray?.forEach { answer in
+                        var ans = answer.replacingOccurrences(of: "_", with: "")
+                        
+                        // Handle the sublines
+                        let charset = CharacterSet(charactersIn: "-")
+                        var formattedSubLines = "\n"
+                        if ans.rangeOfCharacter(from: charset) != nil {
+                            print("Found sublines")
+                            let subLines = ans.components(separatedBy: "-")
+                            
+                            for (index, subLine) in subLines.enumerated() {
+                                if index != 0 {
+                                    formattedSubLines = formattedSubLines + "  -\(subLine)\n"
+                                }
+                            }
+                            
+                            if let range = ans.range(of: "-") {
+                                ans.removeSubrange(range.lowerBound..<ans.endIndex)
+                            }
+                        }
+                        
+                        if formattedSubLines == "\n" {
+                            formattedAnswer = formattedAnswer + "\(ans)\n\n"
+                        } else {
+                            formattedAnswer = formattedAnswer + "\(ans)\(formattedSubLines)\n\n"
+                        }
+                    }
+                    
+                    cardTextLabel.text = formattedAnswer
                 }
                 
                 flipCardBtn.setTitle("Next", for: .normal)

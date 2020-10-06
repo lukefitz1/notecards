@@ -123,6 +123,36 @@ struct Services {
             return "Neptune"
         case "glue":
             return "AWS Glue"
+        case "acm":
+            return "Amazon Certificate Manager (ACM)"
+        case "inspector":
+            return "Amazon Inspector"
+        case "random":
+            return "Random Cards"
+        case "cognito":
+            return "Cognito"
+        case "data_pipeline":
+            return "Data Pipeline"
+        case "xray":
+            return "X-Ray"
+        case "sts":
+            return "Secure Token Service (STS)"
+        case "white_papers":
+            return "White Papers"
+        case "sam":
+            return "Serverless Application Model (SAM)"
+        case "on_prem":
+            return "On Premises"
+        case "data_sync":
+            return "Data Sync"
+        case "ses":
+            return "SES"
+        case "disaster_recovery":
+            return "Disaster Recovery"
+        case "kms":
+            return "KMS"
+        case "quicksite":
+            return "QuickSight"
         default:
             return "Fix me - \(service)"
         }

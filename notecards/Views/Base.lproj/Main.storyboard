@@ -214,6 +214,7 @@
                     <navigationItem key="navigationItem" id="TBe-Hw-av4"/>
                     <connections>
                         <outlet property="tableView" destination="Mpm-eD-DD9" id="gRh-h8-NuO"/>
+                        <segue destination="deC-BM-rD1" kind="show" identifier="ServiceToCardSegue" id="2e4-cg-SWd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gm-vX-CqY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -240,6 +241,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="r97-Bc-12k"/>
+        <segue reference="2e4-cg-SWd"/>
     </inferredMetricsTieBreakers>
 </document>
