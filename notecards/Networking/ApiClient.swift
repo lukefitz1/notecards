@@ -11,4 +11,5 @@ import Alamofire
 
 struct ApiClient {
     static let baseUrl = NotecardsNetworkingConstants.baseURLString
+    static let apiKey = "PcDLYNnW4X6aT2O7oeg507U6zDAPNhBR1PPBsWMr"
 }

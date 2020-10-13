@@ -18,10 +18,11 @@ struct CardsService {
     
     func getCards(completionHandler: (([Card]?, Error?) -> Void)?) {
         let endpoint = buildEndpoint()
+        let headers: HTTPHeaders = [ "x-api-key": ApiClient.apiKey ]
         var data : [Card] = []
         
         print("Network Request: \(endpoint)")
-        AF.request(endpoint).responseJSON { responseJSON in
+        AF.request(endpoint, headers: headers).responseJSON { responseJSON in
                     switch responseJSON.result {
                         case .success:
                             if let safeData = responseJSON.data {
