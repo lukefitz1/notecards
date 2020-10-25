@@ -108,7 +108,7 @@ struct Services {
         case "documentdb":
             return "DocumentDB"
         case "emr":
-            return "Elastic MapReduce"
+            return "Elastic MapReduce (EMR)"
         case "cloudhsm":
             return "CloudHSM"
         case "eks":
@@ -153,6 +153,14 @@ struct Services {
             return "KMS"
         case "quicksite":
             return "QuickSight"
+        case "efa":
+            return "Elastic Fabric Adapter"
+        case "trusted_advisor":
+            return "Trusted Advisor"
+        case "sso":
+            return "Single Sign On (SSO)"
+        case "ram":
+            return "Resource Access Manager (RAM)"
         default:
             return "Fix me - \(service)"
         }

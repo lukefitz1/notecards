@@ -49,7 +49,8 @@ class ServiceListViewController: UIViewController, UITableViewDataSource, UITabl
             }
         }
         
-        self.services = Array(serviceSet)
+        let serviceArray = Array(serviceSet)
+        self.services = serviceArray.sorted { $0[1] < $1[1] }
     }
     
     // MARK: - TableView methods
