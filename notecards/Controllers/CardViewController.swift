@@ -105,18 +105,18 @@ class CardViewController: UIViewController {
                     }
                 } else {
                     let backOfCard = questions[questionsIndex].backOfCard
-                    let backOfCardArray = backOfCard?.components(separatedBy: "_")
+                    let backOfCardArray = backOfCard?.components(separatedBy: "|")
                     var formattedAnswer = ""
                     
                     backOfCardArray?.forEach { answer in
-                        var ans = answer.replacingOccurrences(of: "_", with: "")
+                        var ans = answer.replacingOccurrences(of: "|", with: "")
                         
                         // Handle the sublines
-                        let charset = CharacterSet(charactersIn: "-")
+                        let charset = CharacterSet(charactersIn: "\\")
                         var formattedSubLines = "\n"
                         if ans.rangeOfCharacter(from: charset) != nil {
                             print("Found sublines")
-                            let subLines = ans.components(separatedBy: "-")
+                            let subLines = ans.components(separatedBy: "\\")
                             
                             for (index, subLine) in subLines.enumerated() {
                                 if index != 0 {
@@ -124,7 +124,7 @@ class CardViewController: UIViewController {
                                 }
                             }
                             
-                            if let range = ans.range(of: "-") {
+                            if let range = ans.range(of: "\\") {
                                 ans.removeSubrange(range.lowerBound..<ans.endIndex)
                             }
                         }
