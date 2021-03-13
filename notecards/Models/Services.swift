@@ -161,6 +161,32 @@ struct Services {
             return "Single Sign On (SSO)"
         case "ram":
             return "Resource Access Manager (RAM)"
+        case "artifact":
+            return "Artifact"
+        case "aurora":
+            return "Aurora"
+        case "budgets":
+            return "Budgets"
+        case "control_tower":
+            return "Control Tower"
+        case "cost_allocation_tags":
+            return "Cost Allocation Tags"
+        case "cost_explorer":
+            return "Cost Explorer"
+        case "dlm":
+            return "Data Lifecycle Manager"
+        case "guard_duty":
+            return "Guard Duty"
+        case "macie":
+            return "Macie"
+        case "raid":
+            return "RAID"
+        case "service_catalog":
+            return "Service Catalog"
+        case "service_health_dashboard":
+            return "Service Health Dashboard"
+        case "systems_manager":
+            return "Systems Manager"
         default:
             return "Fix me - \(service)"
         }
