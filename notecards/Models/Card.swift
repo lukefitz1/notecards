@@ -23,6 +23,7 @@ struct Card: Decodable {
     let tests: [String]
     let services: [String]
     let answers: [String]?
+    let primary: Bool?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -34,5 +35,6 @@ struct Card: Decodable {
         case tests
         case services
         case answers
+        case primary
     }
 }

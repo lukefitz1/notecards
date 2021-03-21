@@ -46,7 +46,11 @@ class CardViewController: UIViewController {
             }
         } else if testType == "api" {
             cards.forEach { card in
-                if card.type == "api" || card.type == "question" {
+                // This is for the API button, which I am temporarily changing to just be the primary cards
+//                if card.type == "api" || card.type == "question" {
+//                    questions.append(card)
+//                }
+                if card.primary != nil {
                     questions.append(card)
                 }
             }
